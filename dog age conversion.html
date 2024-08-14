@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dog Age Conversion</title>
+  </head>
+  <body>
+    <h1 class="head"><b>Human to Dog Age Conversion.</b> </h1>
+    
+    <label class="age" for="age"><b>Age:</b></label>
+    <input type="text" id="age">
+
+    <label class="name" for="name"><b>Name:</b></label>
+    <input type="text" id="name">
+
+    <button onclick="calculateAgeInDogYears()">Convert</button>
+
+    <div id="output"></div>
+
+    <script>
+      function calculateAgeInDogYears() {
+        let ageInput = document.getElementById("age");
+        let nameInput = document.getElementById("name");
+
+        let myAge = ageInput.value;
+        let earlyYears = 2;
+        earlyYears *= 10.5;
+        let laterYears = myAge - 2;
+        laterYears *= 4;
+        let myAgeInDogYears = earlyYears + laterYears;
+        let myName = nameInput.value;
+        myName = myName.toLowerCase();
+
+        let outputElement = document.getElementById("output");
+        outputElement.textContent = `                 My name is ${myName}. I am ${myAge} years old in human years, which is ${myAgeInDogYears} years old in dog years.`;
+      }
+    </script>
+    <style>
+    body{background-image: url(https://blogs.biomedcentral.com/on-biology/wp-content/uploads/sites/5/2018/04/nature-3042751_1920-copy-2-620x342.jpg)}
+    body{background-repeat: no-repeat ;}
+    body{background-size: cover;}
+    .head{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: xx-large;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        text-transform: capitalize;
+        
+
+}
+    .age{
+        font-style: italic;
+        color: darkblue;
+        font-size: larger;
+        text-align: center;
+    }
+    .name{
+        font-style:italic ;
+        color: darkblue;
+        font-size: larger;
+        text-align: center;
+    }
+    #output{
+        font-size: xx-large;
+        color: darkpurple;
+        font-weight: bold;
+        
+    }
+   </style>
+    
+  </body>
+</html>
